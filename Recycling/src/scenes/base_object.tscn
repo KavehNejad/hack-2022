@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.0255, 30.8627 )
 
-[node name="base_object" type="Area2D"]
+[node name="base_object" type="Area2D" groups=[
+"falling_object",
+]]
 script = ExtResource( 1 )
 SPEED = 1.5
 
