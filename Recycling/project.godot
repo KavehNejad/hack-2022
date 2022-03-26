@@ -14,6 +14,11 @@ config/name="Recycling"
 run/main_scene="res://src/scenes/main.tscn"
 config/icon="res://assets/images/icon.png"
 
+[display]
+
+window/size/width=630
+window/size/height=960
+
 [input]
 
 right={
