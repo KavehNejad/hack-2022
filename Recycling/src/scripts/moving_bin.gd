@@ -10,7 +10,7 @@ signal moving_bin_entered(score)
 var bin_types
 var current_bin_type = {}
 
-var level = "Level 3"
+var level = "Level 4"
 
 func _ready():
 	set_bin_types()

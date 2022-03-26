@@ -27,5 +27,28 @@
             "image_src": "res://assets/images/green.png",
             "id": 0
         }
+    ],
+    "Level 4":
+    [
+        {
+            "name": "recycling",
+            "image_src": "res://assets/images/green.png",
+            "id": 0
+        },
+        {
+            "name": "food-waste",
+            "image_src" : "res://assets/images/food-waste.jpg",
+            "id": 1
+        },
+        {
+            "name": "recyclable paper",
+            "image_src": "res://assets/images/green.png",
+            "id": 0
+        },
+        {
+            "name": "recyclable plastic",
+            "image_src": "res://assets/images/green.png",
+            "id": 0
+        }
     ]
 }
