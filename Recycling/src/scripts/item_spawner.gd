@@ -3,11 +3,16 @@ extends Node
 const Base_Object = preload("res://src/scenes/base_object.tscn")
 const SPEED_INCREASE = 0.5
 const MAX_SPEED = 7
+const MIN_SPAWN_TIME = 1
+const SPAWN_TIME_INCREASE = 0.1
+
+onready var spawn_timer = get_node("spawn")
 
 var OBJECTS_JSON
 
 var screenSize
 var object_speed = 1.5
+
 
 func _ready():
 	randomize()
@@ -48,3 +53,12 @@ func _get_json(file_path):
 func _on_speed_increase_timeout():
 	object_speed += SPEED_INCREASE
 	object_speed = clamp(object_speed, 1, MAX_SPEED)
+
+
+func _on_spawn_timer_increase_timeout():
+	var spawn_time = spawn_timer.get_wait_time()
+	spawn_time -= SPAWN_TIME_INCREASE
+	if spawn_time < MIN_SPAWN_TIME:
+		return
+
+	spawn_timer.set_wait_time(spawn_time)
