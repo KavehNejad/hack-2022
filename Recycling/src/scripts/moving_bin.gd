@@ -17,6 +17,7 @@ func _ready():
 	set_bin_types()
 	viewport_size = get_viewport_rect().size
 	current_bin_type = bin_types[0]
+	emit_signal("bin_changed", current_bin_type, get_next_bin_type('up'), get_next_bin_type('down'))
 	set_image()
 
 
