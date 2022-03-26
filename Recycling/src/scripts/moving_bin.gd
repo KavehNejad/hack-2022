@@ -1,18 +1,30 @@
 extends KinematicBody2D
 
 export (int) var speed = 10
+onready var sprite = get_node("Sprite")
 
 var velocity = 0
 var viewport_size 
 signal moving_bin_entered(score)
 
-var bin_types = [{"name": "recycling", "id": 0}, {"name": "food waste", "id": 1}, {"name": "test", "id": 3}]
-var current_bin_type = {"name": "", "id": 0}
+var bin_types
+var current_bin_type = {}
 
 func _ready():
+	set_bin_types()
 	viewport_size = get_viewport_rect().size
-	current_bin_type.name = bin_types[0].name
-	current_bin_type.id = bin_types[0].id
+	current_bin_type = bin_types[0]
+	set_image()
+
+func set_bin_types():
+	bin_types = _get_json("res://assets/data/bins.json")
+
+func _get_json(file_path):
+	var file = File.new()
+	file.open(file_path, file.READ)
+	var text = file.get_as_text()
+	file.close()
+	return parse_json(text)
 
 func _process(_delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
@@ -47,16 +59,17 @@ func get_next_bin_type(switch_direction):
 			switch_bin_type(current_bin_type.id - 1)
 	
 func switch_bin_type(id):
+	current_bin_type = bin_types[id]
 
-	current_bin_type.name = bin_types[id].name
-	current_bin_type.id = id
-
+	set_image()
 	print(current_bin_type.name)
 
+func set_image():
+	sprite.set_texture(load(current_bin_type.image_src))
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group('falling_object'):
-		var points = area.points
+		var points = calc_points(area)
 		emit_signal("moving_bin_entered", points)
 		area.destroy()
 
