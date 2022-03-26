@@ -6,12 +6,13 @@ var velocity = 0
 var viewport_size 
 signal moving_bin_entered(score)
 
-var bin_types = [{"name": "recycling", "id": 0}, {"name": "food waste", "id": 1}]
-var current_bin_type
+var bin_types = [{"name": "recycling", "id": 0}, {"name": "food waste", "id": 1}, {"name": "test", "id": 3}]
+var current_bin_type = {"name": "", "id": 0}
 
 func _ready():
 	viewport_size = get_viewport_rect().size
-	current_bin_type = bin_types[0]
+	current_bin_type.name = bin_types[0].name
+	current_bin_type.id = bin_types[0].id
 
 func _process(delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
@@ -39,7 +40,6 @@ func _on_Area2D_bin_entered(body):
 		emit_signal("moving_bin_entered", score)
 
 func get_next_bin_type(switch_direction):
-	var bin_type
 	if (switch_direction == "up"):
 		if (current_bin_type.id == (bin_types.size() - 1)):
 			switch_bin_type(0)
@@ -52,6 +52,9 @@ func get_next_bin_type(switch_direction):
 			switch_bin_type(current_bin_type.id - 1)
 	
 func switch_bin_type(id):
-	current_bin_type.name = bin_types[id].name
+	
+	var name = bin_types[id].name
+	current_bin_type.name = name
 	current_bin_type.id = id
+
 	print(current_bin_type.name)
