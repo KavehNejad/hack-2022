@@ -62,7 +62,6 @@ func switch_bin_type(id):
 	current_bin_type = bin_types[id]
 
 	set_image()
-	print(current_bin_type.name)
 
 func set_image():
 	sprite.set_texture(load(current_bin_type.image_src))

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/scripts/score_holder.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=2]
 
 [node name="score_holder" type="Control"]
 margin_right = 40.0
@@ -11,8 +12,10 @@ __meta__ = {
 }
 
 [node name="score_text" type="Label" parent="."]
+margin_top = -2.24747
 margin_right = 78.0
-margin_bottom = 19.0
+margin_bottom = 16.7525
+custom_fonts/font = ExtResource( 2 )
 text = "SCORE: 0"
 __meta__ = {
 "_edit_use_anchors_": false
