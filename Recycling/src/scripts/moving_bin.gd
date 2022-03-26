@@ -14,10 +14,10 @@ func _ready():
 	current_bin_type.name = bin_types[0].name
 	current_bin_type.id = bin_types[0].id
 
-func _process(_delta):
+func _process(delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	get_input()
 	position.x += velocity
 
@@ -34,11 +34,6 @@ func get_input():
 	velocity = velocity * speed
 
 
-func _on_Area2D_bin_entered(body):
-	if body.is_in_group('falling_object'):
-		var score = 0
-		emit_signal("moving_bin_entered", score)
-
 func get_next_bin_type(switch_direction):
 	if (switch_direction == "up"):
 		if (current_bin_type.id == (bin_types.size() - 1)):
@@ -52,9 +47,16 @@ func get_next_bin_type(switch_direction):
 			switch_bin_type(current_bin_type.id - 1)
 	
 func switch_bin_type(id):
-	
-	var name = bin_types[id].name
-	current_bin_type.name = name
+
+	current_bin_type.name = bin_types[id].name
 	current_bin_type.id = id
 
 	print(current_bin_type.name)
+
+
+func _on_Area2D_area_entered(area):
+	print("hi")
+	if area.is_in_group('falling_object'):
+		print("hello")
+		var score = 0
+		emit_signal("moving_bin_entered", score)
