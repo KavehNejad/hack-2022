@@ -1,12 +1,23 @@
-[
-    {
-        "name": "recycling",
-        "image_src": "res://assets/images/green.png",
-        "id": 0
-    },
-    {
-        "name": "food-waste",
-        "image_src" : "res://assets/images/food_waste.jpg",
-        "id": 1
-    }
-]
+{
+    "Level 1":
+        [
+            {
+                "name": "recycling",
+                "image_src": "res://assets/images/green.png",
+                "id": 0
+            },
+            {
+                "name": "food-waste",
+                "image_src" : "res://assets/images/food-waste.jpg",
+                "id": 1
+            }
+        ],
+    "Level 2":
+        [
+            {
+                "name": "recyclable paper",
+                "image_src": "res://assets/images/green.png",
+                "id": 0
+            }
+        ]
+}

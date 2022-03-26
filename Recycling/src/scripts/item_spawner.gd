@@ -13,11 +13,14 @@ var OBJECTS_JSON
 var screenSize
 var object_speed = 1.5
 
+var level = "Level 2"
+
 
 func _ready():
 	randomize()
-	set_decks_json()
+	set_objects_json()
 	screenSize = int(get_viewport().get_visible_rect().size.x)
+
 
 func _on_spawn_timeout():
 	var object_json = random_object()
@@ -33,14 +36,18 @@ func _on_spawn_timeout():
 func random_object():
 	return OBJECTS_JSON[random_object_index()]
 
+
 func random_object_index():
 	return randi() % OBJECTS_JSON.size()
+
 
 func random_position():
 	return randi() % screenSize
 
-func set_decks_json():
-	OBJECTS_JSON = _get_json("res://assets/data/objects/objects.json")
+
+func set_objects_json():
+	OBJECTS_JSON = _get_json("res://assets/data/objects/objects.json")[level]
+
 
 func _get_json(file_path):
 	var file = File.new()

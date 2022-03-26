@@ -10,14 +10,18 @@ signal moving_bin_entered(score)
 var bin_types
 var current_bin_type = {}
 
+var level = "Level 2"
+
 func _ready():
 	set_bin_types()
 	viewport_size = get_viewport_rect().size
 	current_bin_type = bin_types[0]
 	set_image()
 
+
 func set_bin_types():
-	bin_types = _get_json("res://assets/data/bins.json")
+	bin_types = _get_json("res://assets/data/bins.json")[level]
+
 
 func _get_json(file_path):
 	var file = File.new()
@@ -26,12 +30,15 @@ func _get_json(file_path):
 	file.close()
 	return parse_json(text)
 
+
 func _process(_delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
+
 
 func _physics_process(_delta):
 	get_input()
 	position.x += velocity
+
 
 func get_input():
 	velocity = 0
@@ -63,14 +70,17 @@ func switch_bin_type(id):
 
 	set_image()
 
+
 func set_image():
 	sprite.set_texture(load(current_bin_type.image_src))
+
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group('falling_object'):
 		var points = calc_points(area)
 		emit_signal("moving_bin_entered", points)
 		area.destroy()
+
 
 func calc_points(object):
 	if object.type == current_bin_type.name:
