@@ -69,8 +69,6 @@ func get_next_bin_type(switch_direction):
 
 
 func switch_bin_type(direction):
-	var previous_bin = current_bin_type
-	
 	current_bin_type = get_next_bin_type(direction)
 	
 	emit_signal("bin_changed", current_bin_type, get_next_bin_type('up'), get_next_bin_type('down'))
