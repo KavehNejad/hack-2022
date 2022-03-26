@@ -1,6 +1,6 @@
 extends Node2D
 
-export(float) var SPEED
+export(float) var speed
 
 func _physics_process(_delta):
-	position.y += SPEED
+	position.y += speed
