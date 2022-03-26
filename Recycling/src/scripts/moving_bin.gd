@@ -14,10 +14,10 @@ func _ready():
 	current_bin_type.name = bin_types[0].name
 	current_bin_type.id = bin_types[0].id
 
-func _process(delta):
+func _process(_delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	position.x += velocity
 
@@ -55,8 +55,13 @@ func switch_bin_type(id):
 
 
 func _on_Area2D_area_entered(area):
-	print("hi")
 	if area.is_in_group('falling_object'):
-		print("hello")
-		var score = 0
-		emit_signal("moving_bin_entered", score)
+		var points = area.points
+		emit_signal("moving_bin_entered", points)
+		area.destroy()
+
+func calc_points(object):
+	if object.type == current_bin_type.name:
+		return object.points
+
+	return -object.points

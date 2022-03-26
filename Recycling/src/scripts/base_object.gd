@@ -5,6 +5,7 @@ onready var sprite = get_node("Sprite")
 export(float) var speed
 var type
 var image_src
+var points
 
 func _ready():
 	set_image()
@@ -14,3 +15,6 @@ func _physics_process(_delta):
 
 func set_image():
 	sprite.set_texture(load(image_src))
+
+func destroy():
+	queue_free()

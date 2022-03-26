@@ -1,14 +1,17 @@
 [
     {
         "image_src" : "res://assets/images/general.jpg",
-        "type" : "waste"
+        "type" : "waste",
+        "points" : 1
     },
     {
         "image_src" : "res://assets/images/green.png",
-        "type" : "recycling"
+        "type" : "recycling",
+        "points" : 1
     },
     {
         "image_src" : "res://assets/images/food_waste.jpg",
-        "type" : "food_waste"
+        "type" : "food_waste",
+        "points" : 1
     }
 ]

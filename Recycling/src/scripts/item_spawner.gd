@@ -16,6 +16,7 @@ func _on_Timer_timeout():
 	var object = Base_Object.instance()
 	object.position.x = random_position()
 	object.type = object_json['type']
+	object.points = object_json['points']
 	object.image_src = object_json['image_src']
 	get_parent().add_child(object)
 
