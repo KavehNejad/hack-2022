@@ -42,7 +42,7 @@ func random_object_index():
 
 
 func random_position():
-	return randi() % screenSize
+	return (randi() % (screenSize - 70)) + 35
 
 
 func set_objects_json():
