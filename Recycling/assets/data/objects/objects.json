@@ -6,8 +6,7 @@
     {
         "image_src" : "res://assets/images/green.png",
         "type" : "recycling"
-    }
-    ,
+    },
     {
         "image_src" : "res://assets/images/food_waste.jpg",
         "type" : "food_waste"

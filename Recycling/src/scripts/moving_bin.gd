@@ -14,10 +14,10 @@ func _ready():
 	current_bin_type.name = bin_types[0].name
 	current_bin_type.id = bin_types[0].id
 
-func _process(delta):
+func _process(_delta):
 	position.x = wrapf(position.x, 0, viewport_size.x) 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	position.x += velocity
 
