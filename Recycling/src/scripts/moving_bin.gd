@@ -6,6 +6,7 @@ onready var sprite = get_node("Sprite")
 var velocity = 0
 var viewport_size 
 signal moving_bin_entered(score)
+signal bin_changed(current_bin, next_bin, previous_bin)
 
 var bin_types
 var current_bin_type = {}
@@ -47,26 +48,31 @@ func get_input():
 	if Input.is_action_pressed("left"):
 		velocity -= 1
 	if Input.is_action_just_pressed("up"):
-		get_next_bin_type("up")
+		switch_bin_type("up")
 	if Input.is_action_just_pressed("down"):
-		get_next_bin_type("down")
+		switch_bin_type("down")
 	velocity = velocity * speed
 
 
 func get_next_bin_type(switch_direction):
 	if (switch_direction == "up"):
 		if (current_bin_type.id == (bin_types.size() - 1)):
-			switch_bin_type(0)
+			return bin_types[0]
 		else:
-			switch_bin_type(current_bin_type.id + 1)
+			return bin_types[current_bin_type.id + 1]
 	elif(switch_direction == "down"):
 		if (current_bin_type.id == 0):
-			switch_bin_type(bin_types.size() - 1)
+			return bin_types[bin_types.size() - 1]
 		else:
-			switch_bin_type(current_bin_type.id - 1)
+			return bin_types[current_bin_type.id - 1]
+
+
+func switch_bin_type(direction):
+	var previous_bin = current_bin_type
 	
-func switch_bin_type(id):
-	current_bin_type = bin_types[id]
+	current_bin_type = get_next_bin_type(direction)
+	
+	emit_signal("bin_changed", current_bin_type, get_next_bin_type('up'), get_next_bin_type('down'))
 
 	set_image()
 

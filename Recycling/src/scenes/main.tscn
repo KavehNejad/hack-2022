@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/moving_bin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/scenes/score_holder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/general_waste_bin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/scenes/item_spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/scenes/bin_display.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scripts/bin_display.gd" type="Script" id=7]
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -21,5 +23,10 @@ position = Vector2( -216.956, 919.119 )
 
 [node name="item_spawner" parent="." instance=ExtResource( 5 )]
 
+[node name="bin_display" parent="." instance=ExtResource( 6 )]
+position = Vector2( 586.946, 126.134 )
+script = ExtResource( 7 )
+
+[connection signal="bin_changed" from="moving_bin" to="bin_display" method="_on_moving_bin_bin_changed"]
 [connection signal="moving_bin_entered" from="moving_bin" to="score_holder" method="_on_moving_bin_moving_bin_entered"]
 [connection signal="general_waste_bin_entered" from="general_waste_bin" to="score_holder" method="_on_general_waste_bin_general_waste_bin_entered"]
