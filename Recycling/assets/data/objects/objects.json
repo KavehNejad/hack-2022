@@ -45,5 +45,28 @@
                 "type" : "waste",
                 "points" : 1
             }
+        ],
+    "Level 3":
+        [
+            {
+                "image_src" : "res://assets/images/plastic-bottle.png",
+                "type" : "recyclable plastic",
+                "points" : 1
+            },
+            {
+                "image_src" : "res://assets/images/plastic-cuttlary.webp",
+                "type" : "waste",
+                "points" : 1
+            },
+            {
+                "image_src" : "res://assets/images/bubble-wrap.png",
+                "type" : "waste",
+                "points" : 1
+            },
+            {
+                "image_src" : "res://assets/images/detergent-bottle.png",
+                "type" : "recyclable plastic",
+                "points" : 1
+            }
         ]
 }

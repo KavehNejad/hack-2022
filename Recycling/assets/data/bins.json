@@ -19,5 +19,13 @@
                 "image_src": "res://assets/images/green.png",
                 "id": 0
             }
-        ]
+        ],
+    "Level 3":
+    [
+        {
+            "name": "recyclable plastic",
+            "image_src": "res://assets/images/green.png",
+            "id": 0
+        }
+    ]
 }

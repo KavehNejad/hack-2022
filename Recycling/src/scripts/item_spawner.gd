@@ -13,7 +13,7 @@ var OBJECTS_JSON
 var screenSize
 var object_speed = 1.5
 
-var level = "Level 2"
+var level = "Level 3"
 
 
 func _ready():
