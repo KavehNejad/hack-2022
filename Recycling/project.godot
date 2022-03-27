@@ -18,6 +18,7 @@ config/icon="res://assets/images/icon.png"
 
 window/size/width=630
 window/size/height=960
+window/dpi/allow_hidpi=true
 
 [input]
 
