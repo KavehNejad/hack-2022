@@ -16,12 +16,13 @@ scale = Vector2( 0.789776, 0.805543 )
 texture = SubResource( 1 )
 
 [node name="bin_name_label" type="Label" parent="."]
-margin_left = -136.852
-margin_top = -12.8978
-margin_right = -50.8524
-margin_bottom = 18.1022
+margin_left = -249.0
+margin_top = -14.0
+margin_right = -31.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 3 )
 text = "BIN name"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
