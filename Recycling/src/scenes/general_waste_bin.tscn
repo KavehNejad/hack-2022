@@ -4,7 +4,7 @@
 [ext_resource path="res://src/scripts/general_waste_bin.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 398.418, 57.9735 )
+extents = Vector2( 553.666, 25.2089 )
 
 [node name="general_waste_bin" type="Area2D"]
 script = ExtResource( 2 )
