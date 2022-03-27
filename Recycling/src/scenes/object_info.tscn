@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scripts/object_info.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/food-waste.jpg" type="Texture" id=2]
+
+[node name="object_info" type="Control"]
+margin_right = 393.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 393, 110 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 1.0
+margin_right = 394.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name_label" type="Label" parent="."]
+margin_left = 142.952
+margin_top = 5.88628
+margin_right = 214.952
+margin_bottom = 25.8863
+text = "Food waste"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="description" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 30.0
+margin_right = 261.0
+margin_bottom = 87.0
+text = "This is the description
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="object_sprite" type="Sprite" parent="."]
+position = Vector2( 277.916, 13.4543 )
+scale = Vector2( 0.443715, 0.456651 )
+texture = ExtResource( 2 )
+
+[node name="bin_sprite" type="Sprite" parent="."]
+position = Vector2( 359.076, 72.1179 )
+scale = Vector2( 0.636736, 0.674258 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 285.077
+margin_top = 67.0725
+margin_right = 325.077
+margin_bottom = 81.0725
+text = "BIN:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
