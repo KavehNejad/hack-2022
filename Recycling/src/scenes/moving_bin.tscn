@@ -19,6 +19,7 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -12.0533, 2.19884 )
 shape = SubResource( 1 )
 
@@ -30,6 +31,7 @@ texture = ExtResource( 3 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2( -4.76218, 0 )
 shape = SubResource( 2 )
 

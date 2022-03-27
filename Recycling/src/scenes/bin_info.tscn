@@ -1,8 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/scripts/bin_info.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/general.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=3]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/general.jpg-ae423b322e3c5f5cad58e4f6e6d0cbfd.stex"
 
 [node name="bin_info" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,7 +13,7 @@ script = ExtResource( 1 )
 [node name="bin_image" type="Sprite" parent="."]
 position = Vector2( 0.840897, -0.210224 )
 scale = Vector2( 0.789776, 0.805543 )
-texture = ExtResource( 2 )
+texture = SubResource( 1 )
 
 [node name="bin_name_label" type="Label" parent="."]
 margin_left = -136.852
