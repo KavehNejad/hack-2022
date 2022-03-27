@@ -31,24 +31,21 @@
     "Level 4":
     [
         {
-            "name": "recycling",
-            "image_src": "res://assets/images/green.png",
-            "id": 0
-        },
-        {
             "name": "food-waste",
             "image_src" : "res://assets/images/food-waste.jpg",
-            "id": 1
+            "id": 0
         },
         {
             "name": "recyclable paper",
             "image_src": "res://assets/images/green.png",
-            "id": 0
+            "id": 1,
+            "bin_name": "Paper"
         },
         {
             "name": "recyclable plastic",
             "image_src": "res://assets/images/green.png",
-            "id": 0
+            "id": 2,
+            "bin_name": "Plastic"
         }
     ]
 }

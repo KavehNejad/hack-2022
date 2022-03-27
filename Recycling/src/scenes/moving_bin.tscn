@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/images/pixel-art/bin.png" type="Texture" id=1]
 [ext_resource path="res://src/scripts/moving_bin.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/green.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 43.7304, 75.0879 )
@@ -34,5 +35,16 @@ texture = ExtResource( 3 )
 visible = false
 position = Vector2( -4.76218, 0 )
 shape = SubResource( 2 )
+
+[node name="bin_name_label" type="Label" parent="."]
+margin_left = -48.0054
+margin_top = -55.3568
+margin_right = 27.9946
+margin_bottom = -24.3568
+custom_fonts/font = ExtResource( 4 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
