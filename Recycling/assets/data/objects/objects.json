@@ -113,8 +113,7 @@
                 "image_src" : "res://assets/images/wrapping-paper.jpg",
                 "type" : "waste",
                 "points" : 1
-            }
-            ,
+            },
             {
                 "image_src" : "res://assets/images/greasy-pizza-box.png",
                 "type" : "waste",
