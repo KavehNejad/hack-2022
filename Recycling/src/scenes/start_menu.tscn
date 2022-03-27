@@ -1,3 +1,46 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/videos/menu_video.ogv" type="VideoStream" id=1]
+[ext_resource path="res://assets/images/title.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/start/start_button_hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/start/start_button_default.png" type="Texture" id=4]
 
 [node name="start_menu" type="Node"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.470588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 328, 224 )
+scale = Vector2( 0.689247, 0.689247 )
+texture = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.0
+margin_top = 168.0
+margin_right = 679.0
+margin_bottom = 468.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
