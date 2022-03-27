@@ -29,7 +29,6 @@ margin_left = 35.0
 margin_top = 34.0
 margin_right = 437.0
 margin_bottom = 557.0
-rect_clip_content = false
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false

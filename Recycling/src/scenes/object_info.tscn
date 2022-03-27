@@ -60,7 +60,7 @@ __meta__ = {
 [node name="description" type="Label" parent="."]
 margin_left = 135.0
 margin_top = 43.0
-margin_right = 265.0
+margin_right = 349.0
 margin_bottom = 116.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -77,8 +77,8 @@ scale = Vector2( 1.65826, 1.57114 )
 texture = ExtResource( 2 )
 
 [node name="bin_sprite" type="Sprite" parent="."]
-position = Vector2( 312.897, 79.7129 )
-scale = Vector2( 1.13827, 1.05845 )
+position = Vector2( 338.295, 22.9621 )
+scale = Vector2( 0.442255, 0.411243 )
 texture = ExtResource( 2 )
 
 [node name="bin_title" type="Label" parent="."]

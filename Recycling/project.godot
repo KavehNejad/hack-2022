@@ -17,6 +17,7 @@ config/icon="res://assets/images/green.png"
 [autoload]
 
 Global="*res://src/scripts/global.gd"
+LoadScenes="*res://src/scenes/load_scenes.tscn"
 
 [display]
 

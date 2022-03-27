@@ -19,6 +19,5 @@ func _process(delta):
 		$VideoPlayer.play()
 
 func _on_start_button_pressed():
-	print("hi")
-	var followingScene = get_tree().change_scene("res://src/scenes/level_select.tscn")
-	#Global.go_to_scene("res://src/scenes/level_select.tscn")
+	#var followingScene = get_tree().change_scene("res://src/scenes/level_select.tscn")
+	LoadScenes.go_to_scene("res://src/scenes/level_select.tscn")

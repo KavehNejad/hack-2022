@@ -7,6 +7,7 @@ var LEVELS_JSON
 func _ready():
 	set_levels_json()
 	create_buttons()
+	LoadScenes.get_node("AnimationPlayer").play("fade_in")
 
 func _process(delta):
 	if not $VideoPlayer.is_playing():
@@ -36,4 +37,5 @@ func _get_json(file_path):
 
 func _on_level_select(level_name):
 	Global.level_name = level_name
-	var _unused = get_tree().change_scene("res://src/scenes/main.tscn")
+	LoadScenes.go_to_scene("res://src/scenes/main.tscn")
+	#var _unused = get_tree().change_scene("res://src/scenes/main.tscn")
