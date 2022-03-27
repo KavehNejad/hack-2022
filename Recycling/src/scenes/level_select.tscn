@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scripts/level_select.gd" type="Script" id=1]
+[ext_resource path="res://src/scenes/level_option.tscn" type="PackedScene" id=2]
+
+[node name="level_select" type="Node2D"]
+position = Vector2( 191.508, 458.611 )
+script = ExtResource( 1 )
+level_button = ExtResource( 2 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = -111.0
+margin_top = -1.0
+margin_right = 389.0
+margin_bottom = 99.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 500.0
+size_flags_horizontal = 3

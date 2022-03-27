@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Recycling"
-run/main_scene="res://src/scenes/main.tscn"
+run/main_scene="res://src/scenes/level_select.tscn"
 config/icon="res://assets/images/icon.png"
+
+[autoload]
+
+Global="*res://src/scripts/global.gd"
 
 [display]
 

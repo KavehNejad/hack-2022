@@ -7,15 +7,12 @@ script = ExtResource( 1 )
 
 [node name="spawn" type="Timer" parent="."]
 wait_time = 2.0
-autostart = true
 
 [node name="speed_increase" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
 [node name="spawn_timer_increase" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
 [connection signal="timeout" from="spawn" to="." method="_on_spawn_timeout"]
 [connection signal="timeout" from="speed_increase" to="." method="_on_speed_increase_timeout"]

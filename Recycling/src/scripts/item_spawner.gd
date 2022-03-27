@@ -18,6 +18,7 @@ var level = "Level 1"
 
 func _ready():
 	randomize()
+	level = Global.level_name
 	set_objects_json()
 	screenSize = int(get_viewport().get_visible_rect().size.x)
 
@@ -70,3 +71,10 @@ func _on_spawn_timer_increase_timeout():
 		return
 
 	spawn_timer.set_wait_time(spawn_time)
+
+
+func _on_start_button_pressed():
+	$spawn.start()
+	$speed_increase.start()
+	$spawn_timer_increase.start()
+	

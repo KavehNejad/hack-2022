@@ -5,19 +5,22 @@
                 "name": "general waste",
                 "image_src" : "res://assets/images/general.jpg",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "general household waste"
             },
             {
                 "name": "recyclables",
                 "image_src" : "res://assets/images/green.png",
                 "type" : "recycling",
-                "points" : 1
+                "points" : 1,
+                "description": "General recycling"
             },
             {
                 "name": "food waste",
                 "image_src" : "res://assets/images/food-waste.jpg",
                 "type" : "food-waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Compostable food waste"
             }
         ],
     "Level 2":
