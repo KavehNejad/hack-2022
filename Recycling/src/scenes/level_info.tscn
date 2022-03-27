@@ -18,10 +18,9 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-modulate = Color( 0.196078, 0.784314, 0.247059, 1 )
-margin_left = 77.912
+margin_left = 72.2487
 margin_top = 137.844
-margin_right = 559.912
+margin_right = 554.249
 margin_bottom = 819.844
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,10 +52,11 @@ custom_constants/separation = 150
 alignment = 1
 
 [node name="start_button" type="TextureButton" parent="."]
-margin_left = 247.773
-margin_top = 719.744
-margin_right = 368.773
-margin_bottom = 781.744
+margin_left = 238.334
+margin_top = 714.081
+margin_right = 359.334
+margin_bottom = 776.081
+rect_scale = Vector2( 1.2, 1.2 )
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 expand = true
