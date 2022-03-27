@@ -19,9 +19,21 @@ __meta__ = {
 margin_left = 47.0
 margin_top = 61.0
 margin_right = 449.0
-margin_bottom = 656.0
+margin_bottom = 589.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+
+[node name="start_button" type="Button" parent="."]
+margin_left = 169.861
+margin_top = 581.9
+margin_right = 290.861
+margin_bottom = 643.9
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]

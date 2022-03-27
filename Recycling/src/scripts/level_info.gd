@@ -46,3 +46,7 @@ func _get_json(file_path):
 	var text = file.get_as_text()
 	file.close()
 	return parse_json(text)
+
+
+func _on_start_button_pressed():
+	queue_free()
