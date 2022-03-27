@@ -29,32 +29,37 @@
                 "name": "printing paper",
                 "image_src" : "res://assets/images/printing-paper.png",
                 "type" : "recyclable paper",
-                "points" : 1
+                "points" : 1,
+                "description": "Printer paper is recyclable and is often turned into new printer paper"
             },
             {
                 "name": "kitchen paper",
                 "image_src" : "res://assets/images/kitchen-paper.jpeg",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "It's not often known, but you can't recycle tissue paper either. A lot of tissue paper is made from already recycled paper. This means that it can't be recycled again, the fibres are too short and will result in poor pulp in the recycling process."
             },
             {
                 "name": "cardboard box",
                 "image_src" : "res://assets/images/cardboard-box.png",
                 "type" : "recyclable paper",
-                "points" : 1
+                "points" : 1,
+                "description": "Fortunately, unlike some other items, recycling cardboard is pretty straight forward. It can all be recycled. It is a high-quality material capable of being recycled multiple times.  Recycling boxes also reduces processing pollution by 95% because the fiber has already been processed"
             },
             {
                 "name": "wrapping paper",
                 "image_src" : "res://assets/images/wrapping-paper.jpg",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Wrapping paper is often dyed, laminated and/or contains non-paper additives such as gold and silver coloured shapes, glitter, plastics and so on, which cannot be recycled"
             }
             ,
             {
                 "name": "greasy cardboard",
                 "image_src" : "res://assets/images/greasy-pizza-box.png",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Wet or greasy cardboard like pizza boxes or fast food boxes are considered a contaminate and belong in the garbage.  Wet or contaminated items can jam sorting equipment and ruin good, clean material"
             }
         ],
     "Level 3":
@@ -63,25 +68,29 @@
                 "name": "plastic bottle",
                 "image_src" : "res://assets/images/plastic-bottle.png",
                 "type" : "recyclable plastic",
-                "points" : 1
+                "points" : 1,
+                "description": "Plastic bottles can be recycled with your household recycling collection including"
             },
             {
                 "name": "plastic cuttery",
                 "image_src" : "res://assets/images/plastic-cuttlary.webp",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Plastic cutlery is usually made of polystyrene, which is tricky to recycle and not all local councils accept polystyrene"
             },
             {
                 "name": "bubble wrap",
                 "image_src" : "res://assets/images/bubble-wrap.png",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Bubble wrap is completely recyclable, but cannot be accepted curbside or grouped in with the rest of your home and business recycling"
             },
             {
                 "name": "detergent bottle",
                 "image_src" : "res://assets/images/detergent-bottle.png",
                 "type" : "recyclable plastic",
-                "points" : 1
+                "points" : 1,
+                "description": "Detergent bottles are 100% recyclable. Most recycling centers will easily recycle and collect this category of plastics"
             }
         ],
         "Level 4":
@@ -90,55 +99,65 @@
                 "name": "plastic bottle",
                 "image_src" : "res://assets/images/plastic-bottle.png",
                 "type" : "recyclable plastic",
-                "points" : 1
+                "points" : 1,
+                "description": "Plastic bottles can be recycled with your household recycling collection including"
             },
             {
                 "name": "plastic cuttery",
                 "image_src" : "res://assets/images/plastic-cuttlary.webp",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Plastic cutlery is usually made of polystyrene, which is tricky to recycle and not all local councils accept polystyrene"
             },
             {
                 "name": "bubble wrap",
                 "image_src" : "res://assets/images/bubble-wrap.png",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Bubble wrap is completely recyclable, but cannot be accepted curbside or grouped in with the rest of your home and business recycling"
             },
             {
                 "name": "detergent bottle",
                 "image_src" : "res://assets/images/detergent-bottle.png",
                 "type" : "recyclable plastic",
-                "points" : 1
+                "points" : 1,
+                "description": "Detergent bottles are 100% recyclable. Most recycling centers will easily recycle and collect this category of plastics"
             },
             {
                 "name": "printing paper",
                 "image_src" : "res://assets/images/printing-paper.png",
                 "type" : "recyclable paper",
-                "points" : 1
+                "points" : 1,
+                "description": "Printer paper is recyclable and is often turned into new printer paper"
             },
             {
                 "name": "kitchen paper",
                 "image_src" : "res://assets/images/kitchen-paper.jpeg",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "It's not often known, but you can't recycle tissue paper either. A lot of tissue paper is made from already recycled paper. This means that it can't be recycled again, the fibres are too short and will result in poor pulp in the recycling process."
             },
             {
                 "name": "cardboard box",
                 "image_src" : "res://assets/images/cardboard-box.png",
                 "type" : "recyclable paper",
-                "points" : 1
+                "points" : 1,
+                "description": "Fortunately, unlike some other items, recycling cardboard is pretty straight forward. It can all be recycled. It is a high-quality material capable of being recycled multiple times.  Recycling boxes also reduces processing pollution by 95% because the fiber has already been processed"
             },
             {
                 "name": "wrapping paper",
                 "image_src" : "res://assets/images/wrapping-paper.jpg",
                 "type" : "waste",
-                "points" : 1
-            },
+                "points" : 1,
+                "description": "Wrapping paper is often dyed, laminated and/or contains non-paper additives such as gold and silver coloured shapes, glitter, plastics and so on, which cannot be recycled"
+            }
+            ,
             {
                 "name": "greasy cardboard",
                 "image_src" : "res://assets/images/greasy-pizza-box.png",
                 "type" : "waste",
-                "points" : 1
+                "points" : 1,
+                "description": "Wet or greasy cardboard like pizza boxes or fast food boxes are considered a contaminate and belong in the garbage.  Wet or contaminated items can jam sorting equipment and ruin good, clean material"
             }
         ]
 }
