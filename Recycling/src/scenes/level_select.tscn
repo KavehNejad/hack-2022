@@ -1,18 +1,45 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/scripts/level_select.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/level_option.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/videos/menu_video.ogv" type="VideoStream" id=3]
 
 [node name="level_select" type="Node2D"]
 position = Vector2( 191.508, 458.611 )
 script = ExtResource( 1 )
 level_button = ExtResource( 2 )
 
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -191.0
+margin_top = -454.0
+margin_right = 436.0
+margin_bottom = 498.0
+rect_min_size = Vector2( 500, 0 )
+stream = ExtResource( 3 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -191.0
+margin_top = -462.0
+margin_right = -135.0
+margin_bottom = -385.0
+rect_scale = Vector2( 11.1318, 12.4378 )
+color = Color( 0, 0, 0, 0.301961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = -111.0
 margin_top = -1.0
 margin_right = 389.0
-margin_bottom = 99.0
+margin_bottom = 110.0
+rect_scale = Vector2( 1.7, 1.7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,3 +47,4 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
 margin_right = 500.0
 size_flags_horizontal = 3
+custom_constants/separation = 10

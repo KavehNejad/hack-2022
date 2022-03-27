@@ -1,14 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/scripts/level_option.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/level_preview/4.png" type="Texture" id=2]
 
-[node name="Button" type="Button"]
+[node name="Button" type="TextureButton"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 155.0
 margin_bottom = 71.0
 rect_min_size = Vector2( 145, 60 )
+rect_scale = Vector2( 2, 2 )
 action_mode = 0
+texture_normal = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
