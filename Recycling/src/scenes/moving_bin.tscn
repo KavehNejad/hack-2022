@@ -5,10 +5,10 @@
 [ext_resource path="res://assets/images/green.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.9677, 32.6473 )
+extents = Vector2( 43.7304, 75.0879 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30.8298, 10 )
+extents = Vector2( 47.5511, 72.8891 )
 
 [node name="moving_ bin" type="KinematicBody2D" groups=[
 "bins",
@@ -19,18 +19,17 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -4.76218, 0 )
+position = Vector2( -12.0533, 2.19884 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -12.8252, -8.45984 )
+position = Vector2( -12.076, -6.96153 )
 scale = Vector2( 0.425591, 0.425591 )
 texture = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 position = Vector2( -4.76218, 0 )
 shape = SubResource( 2 )
 
