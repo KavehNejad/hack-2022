@@ -25,7 +25,6 @@ tracks/0/keys = {
 }
 
 [node name="Control" type="Control"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -80,7 +79,7 @@ __meta__ = {
 }
 
 [node name="dissapear_timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 
 [node name="fade_out_animation" type="AnimationPlayer" parent="."]
 anims/fade_out_message = SubResource( 3 )
