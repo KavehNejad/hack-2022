@@ -15,11 +15,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+margin_left = -1.0
+margin_right = 484.0
+margin_bottom = 688.0
+color = Color( 0.584314, 0.584314, 0.584314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 35.0
 margin_top = 34.0
 margin_right = 437.0
 margin_bottom = 557.0
+rect_clip_content = false
+follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

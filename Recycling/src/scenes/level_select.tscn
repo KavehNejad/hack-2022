@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/scripts/level_select.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/level_option.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/videos/menu_video.ogv" type="VideoStream" id=3]
+[ext_resource path="res://assets/videos/menu_video (1).ogv" type="VideoStream" id=3]
 
 [node name="level_select" type="Node2D"]
 position = Vector2( 191.508, 458.611 )
