@@ -29,8 +29,9 @@ func _on_spawn_timeout():
 	object.type = object_json['type']
 	object.points = object_json['points']
 	object.image_src = object_json['image_src']
+	object.object_name = object_json['name']
 	object.speed = object_speed
-	get_parent().add_child(object)
+	add_child(object)
 
 
 func random_object():

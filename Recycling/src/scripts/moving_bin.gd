@@ -7,6 +7,7 @@ var velocity = 0
 var viewport_size 
 signal moving_bin_entered(score)
 signal bin_changed(current_bin, next_bin, previous_bin)
+signal wrong_bin(message)
 
 var bin_types
 var current_bin_type = {}
@@ -17,7 +18,6 @@ func _ready():
 	set_bin_types()
 	viewport_size = get_viewport_rect().size
 	current_bin_type = bin_types[0]
-	print(current_bin_type)
 	emit_signal("bin_changed", current_bin_type, get_next_bin_type('up'), get_next_bin_type('down'))
 	set_image()
 
@@ -84,6 +84,10 @@ func set_image():
 func _on_Area2D_area_entered(area):
 	if area.is_in_group('falling_object'):
 		var points = calc_points(area)
+		if (area.type != current_bin_type.name):
+			var message = get_alert_messages(area)
+			
+			emit_signal("wrong_bin", message)
 		emit_signal("moving_bin_entered", points)
 		area.destroy()
 
@@ -91,5 +95,14 @@ func _on_Area2D_area_entered(area):
 func calc_points(object):
 	if object.type == current_bin_type.name:
 		return object.points
-
+	
 	return -object.points
+
+func get_alert_messages(object):
+	if object.type != current_bin_type.name:
+		var name = object.object_name
+		
+		var output = "The " + name + " was disposed of incorrectly."
+		
+		return output
+	return "good keep going!"

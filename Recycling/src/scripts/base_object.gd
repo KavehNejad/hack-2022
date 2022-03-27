@@ -6,6 +6,7 @@ export(float) var speed
 var type
 var image_src
 var points
+var object_name
 
 func _ready():
 	set_image()

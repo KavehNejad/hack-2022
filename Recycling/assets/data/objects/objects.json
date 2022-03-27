@@ -2,16 +2,19 @@
     "Level 1":
         [
             {
+                "name": "general waste",
                 "image_src" : "res://assets/images/general.jpg",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "recyclables",
                 "image_src" : "res://assets/images/green.png",
                 "type" : "recycling",
                 "points" : 1
             },
             {
+                "name": "food waste",
                 "image_src" : "res://assets/images/food-waste.jpg",
                 "type" : "food-waste",
                 "points" : 1
@@ -20,27 +23,32 @@
     "Level 2":
         [
             {
+                "name": "printing paper",
                 "image_src" : "res://assets/images/printing-paper.png",
                 "type" : "recyclable paper",
                 "points" : 1
             },
             {
+                "name": "kitchen paper",
                 "image_src" : "res://assets/images/kitchen-paper.jpeg",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "cardboard box",
                 "image_src" : "res://assets/images/cardboard-box.png",
                 "type" : "recyclable paper",
                 "points" : 1
             },
             {
+                "name": "wrapping paper",
                 "image_src" : "res://assets/images/wrapping-paper.jpg",
                 "type" : "waste",
                 "points" : 1
             }
             ,
             {
+                "name": "greasy cardboard",
                 "image_src" : "res://assets/images/greasy-pizza-box.png",
                 "type" : "waste",
                 "points" : 1
@@ -49,21 +57,25 @@
     "Level 3":
         [
             {
+                "name": "plastic bottle",
                 "image_src" : "res://assets/images/plastic-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1
             },
             {
+                "name": "plastic cuttery",
                 "image_src" : "res://assets/images/plastic-cuttlary.webp",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "bubble wrap",
                 "image_src" : "res://assets/images/bubble-wrap.png",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "detergent bottle",
                 "image_src" : "res://assets/images/detergent-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1
@@ -72,64 +84,58 @@
         "Level 4":
         [
             {
+                "name": "plastic bottle",
                 "image_src" : "res://assets/images/plastic-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1
             },
             {
+                "name": "plastic cuttery",
                 "image_src" : "res://assets/images/plastic-cuttlary.webp",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "bubble wrap",
                 "image_src" : "res://assets/images/bubble-wrap.png",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "detergent bottle",
                 "image_src" : "res://assets/images/detergent-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1
             },
             {
+                "name": "printing paper",
                 "image_src" : "res://assets/images/printing-paper.png",
                 "type" : "recyclable paper",
                 "points" : 1
             },
             {
+                "name": "kitchen paper",
                 "image_src" : "res://assets/images/kitchen-paper.jpeg",
                 "type" : "waste",
                 "points" : 1
             },
             {
+                "name": "cardboard box",
                 "image_src" : "res://assets/images/cardboard-box.png",
                 "type" : "recyclable paper",
                 "points" : 1
             },
             {
+                "name": "wrapping paper",
                 "image_src" : "res://assets/images/wrapping-paper.jpg",
                 "type" : "waste",
                 "points" : 1
             }
             ,
             {
+                "name": "greasy cardboard",
                 "image_src" : "res://assets/images/greasy-pizza-box.png",
                 "type" : "waste",
-                "points" : 1
-            },
-            {
-                "image_src" : "res://assets/images/general.jpg",
-                "type" : "waste",
-                "points" : 1
-            },
-            {
-                "image_src" : "res://assets/images/green.png",
-                "type" : "recycling",
-                "points" : 1
-            },
-            {
-                "image_src" : "res://assets/images/food-waste.jpg",
-                "type" : "food-waste",
                 "points" : 1
             }
         ]

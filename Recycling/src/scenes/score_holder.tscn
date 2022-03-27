@@ -6,17 +6,44 @@
 [node name="score_holder" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
+rect_pivot_offset = Vector2( -287.556, -97.4329 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="score_text" type="Label" parent="."]
-margin_top = -2.24747
-margin_right = 78.0
-margin_bottom = 16.7525
+[node name="border" type="ColorRect" parent="."]
+margin_left = 2.0
+margin_right = 140.0
+margin_bottom = 58.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = 5.84088
+margin_top = 3.99999
+margin_right = 135.841
+margin_bottom = 54.0
+color = Color( 0.811765, 0.0980392, 0.298039, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score_text" type="Label" parent="background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.9989
+margin_top = -13.9856
+margin_right = 65.0011
+margin_bottom = 17.0144
 custom_fonts/font = ExtResource( 2 )
 text = "SCORE: 0"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
