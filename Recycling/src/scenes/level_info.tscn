@@ -1,16 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/scripts/level_info.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/object_info.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/start_level.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/start_level_hover.png" type="Texture" id=4]
 
 [node name="level_info" type="Node2D"]
 script = ExtResource( 1 )
 object_info_scene = ExtResource( 2 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 634.0
+margin_bottom = 964.0
+color = Color( 0, 0, 0, 0.337255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Panel" type="Panel" parent="."]
 modulate = Color( 0.196078, 0.784314, 0.247059, 1 )
-margin_right = 482.0
-margin_bottom = 682.0
+margin_left = 77.912
+margin_top = 137.844
+margin_right = 559.912
+margin_bottom = 819.844
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -25,10 +37,10 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 35.0
-margin_top = 34.0
-margin_right = 437.0
-margin_bottom = 557.0
+margin_left = 112.912
+margin_top = 171.844
+margin_right = 514.912
+margin_bottom = 694.844
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,14 +52,13 @@ grow_vertical = 2
 custom_constants/separation = 150
 alignment = 1
 
-[node name="start_button" type="Button" parent="."]
-margin_left = 169.861
-margin_top = 581.9
-margin_right = 290.861
-margin_bottom = 643.9
-text = "Play"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="start_button" type="TextureButton" parent="."]
+margin_left = 247.773
+margin_top = 719.744
+margin_right = 368.773
+margin_bottom = 781.744
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
 
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]

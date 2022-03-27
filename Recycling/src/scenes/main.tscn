@@ -54,7 +54,7 @@ margin_right = -236.0
 margin_bottom = 78.0
 
 [node name="level_info" parent="." instance=ExtResource( 11 )]
-position = Vector2( 82.76, 57.3981 )
+position = Vector2( -1.52701, 0 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 578.536
