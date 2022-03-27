@@ -18,6 +18,7 @@ var level = "Level 1"
 
 func _ready():
 	randomize()
+	level = Global.level_name
 	set_objects_json()
 	screenSize = int(get_viewport().get_visible_rect().size.x)
 
