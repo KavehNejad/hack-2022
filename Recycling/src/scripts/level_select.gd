@@ -8,6 +8,9 @@ func _ready():
 	set_levels_json()
 	create_buttons()
 
+func _process(delta):
+	if not $VideoPlayer.is_playing():
+		$VideoPlayer.play()
 
 func create_buttons():
 	for level in LEVELS_JSON:
@@ -19,6 +22,8 @@ func create_buttons():
 
 func set_levels_json():
 	LEVELS_JSON = _get_json("res://assets/data/levels.json")
+
+
 
 
 func _get_json(file_path):
