@@ -61,6 +61,7 @@ position = Vector2( 82.76, 57.3981 )
 [connection signal="moving_bin_entered" from="moving_bin" to="score_holder" method="_on_moving_bin_moving_bin_entered"]
 [connection signal="wrong_bin" from="moving_bin" to="error_message" method="_on_moving_bin_wrong_bin"]
 [connection signal="general_waste_bin_entered" from="general_waste_bin" to="score_holder" method="_on_general_waste_bin_general_waste_bin_entered"]
+[connection signal="wrong_bin" from="general_waste_bin" to="error_message" method="_on_general_waste_bin_wrong_bin"]
 [connection signal="pressed" from="level_info/start_button" to="item_spawner" method="_on_start_button_pressed"]
 
 [editable path="level_info"]
