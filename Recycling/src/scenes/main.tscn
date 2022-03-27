@@ -9,7 +9,8 @@
 [ext_resource path="res://src/scripts/bin_display.gd" type="Script" id=7]
 [ext_resource path="res://assets/images/pixel-art/background.png" type="Texture" id=8]
 [ext_resource path="res://assets/images/pixel-art/background-shadow.png" type="Texture" id=9]
-[ext_resource path="res://src/scenes/level_info.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/scenes/messages.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/scenes/level_info.tscn" type="PackedScene" id=11]
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -22,11 +23,18 @@ texture = ExtResource( 8 )
 [node name="item_spawner" parent="." instance=ExtResource( 5 )]
 
 [node name="bin_display" parent="." instance=ExtResource( 6 )]
-position = Vector2( 586.946, 126.134 )
+position = Vector2( 568, 160 )
 script = ExtResource( 7 )
 
 [node name="moving_bin" parent="." instance=ExtResource( 2 )]
 position = Vector2( 313.827, 696 )
+
+[node name="error_message" parent="." instance=ExtResource( 10 )]
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 32.0
+margin_top = 100.513
+margin_right = 32.0
+margin_bottom = 100.513
 
 [node name="shadow" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.282353 )
@@ -39,14 +47,19 @@ position = Vector2( -248, 472 )
 scale = Vector2( 1.1, 1 )
 
 [node name="score_holder" parent="." instance=ExtResource( 3 )]
-margin_right = 47.0
-margin_bottom = 46.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -283.0
+margin_top = 32.0
+margin_right = -236.0
+margin_bottom = 78.0
 
 [node name="level_info" parent="." instance=ExtResource( 10 )]
 position = Vector2( 65.0538, 25.4558 )
 
 [connection signal="bin_changed" from="moving_bin" to="bin_display" method="_on_moving_bin_bin_changed"]
 [connection signal="moving_bin_entered" from="moving_bin" to="score_holder" method="_on_moving_bin_moving_bin_entered"]
+[connection signal="wrong_bin" from="moving_bin" to="error_message" method="_on_moving_bin_wrong_bin"]
 [connection signal="general_waste_bin_entered" from="general_waste_bin" to="score_holder" method="_on_general_waste_bin_general_waste_bin_entered"]
 [connection signal="pressed" from="level_info/start_button" to="item_spawner" method="_on_start_button_pressed"]
 

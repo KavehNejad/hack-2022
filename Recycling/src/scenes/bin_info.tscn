@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/scripts/bin_info.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/general.jpg-ae423b322e3c5f5cad58e4f6e6d0cbfd.stex"
+
+[sub_resource type="DynamicFontData" id=2]
+resource_local_to_scene = true
+font_path = "res://assets/fonts/main_font.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = SubResource( 2 )
 
 [node name="bin_info" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,12 +23,12 @@ scale = Vector2( 0.789776, 0.805543 )
 texture = SubResource( 1 )
 
 [node name="bin_name_label" type="Label" parent="."]
-margin_left = -249.0
-margin_top = -14.0
-margin_right = -31.0
-margin_bottom = 17.0
-custom_fonts/font = ExtResource( 3 )
-text = "BIN name"
+margin_left = -263.865
+margin_top = -11.027
+margin_right = -45.8651
+margin_bottom = 19.973
+custom_fonts/font = SubResource( 3 )
+text = "BIN name:"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
