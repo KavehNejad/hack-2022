@@ -6,8 +6,9 @@ func _ready():
 	$background.color = "#888888"
 	
 func update_score():
-	$background/score_text.text = "Score: " + String(current_score)
-	change_colour()
+	if (Global.level_going == true):
+		$background/score_text.text = "Score: " + String(current_score)
+		change_colour()
 
 func _on_moving_bin_moving_bin_entered(points):
 	current_score += points
@@ -25,3 +26,6 @@ func change_colour():
 	else:
 		$background.color = '#cf194c'
 	
+
+func get_current_score():
+	return current_score

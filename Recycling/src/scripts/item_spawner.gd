@@ -24,15 +24,16 @@ func _ready():
 
 
 func _on_spawn_timeout():
-	var object_json = random_object()
-	var object = Base_Object.instance()
-	object.position.x = random_position()
-	object.type = object_json['type']
-	object.points = object_json['points']
-	object.image_src = object_json['image_src']
-	object.object_name = object_json['name']
-	object.speed = object_speed
-	add_child(object)
+	if (Global.level_going == true):
+		var object_json = random_object()
+		var object = Base_Object.instance()
+		object.position.x = random_position()
+		object.type = object_json['type']
+		object.points = object_json['points']
+		object.image_src = object_json['image_src']
+		object.object_name = object_json['name']
+		object.speed = object_speed
+		add_child(object)
 
 
 func random_object():
@@ -74,7 +75,12 @@ func _on_spawn_timer_increase_timeout():
 
 
 func _on_start_button_pressed():
+	Global.level_going = true
 	$spawn.start()
 	$speed_increase.start()
 	$spawn_timer_increase.start()
 	
+
+
+func _on_level_timer_timeout():
+	Global.level_going = false

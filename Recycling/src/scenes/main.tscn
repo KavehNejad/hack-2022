@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/moving_bin.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://assets/images/pixel-art/background-shadow.png" type="Texture" id=9]
 [ext_resource path="res://src/scenes/messages.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/scenes/level_info.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/scripts/timer_holder.gd" type="Script" id=12]
+[ext_resource path="res://assets/fonts/main_font.tres" type="DynamicFont" id=13]
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -53,6 +55,53 @@ margin_top = 32.0
 margin_right = -236.0
 margin_bottom = 78.0
 
+[node name="timer_holder" type="Control" parent="."]
+margin_left = 233.0
+margin_top = 880.0
+margin_right = 273.0
+margin_bottom = 920.0
+script = ExtResource( 12 )
+
+[node name="level_timer" type="Timer" parent="timer_holder"]
+wait_time = 60.0
+one_shot = true
+
+[node name="border" type="ColorRect" parent="timer_holder"]
+margin_left = 2.0
+margin_right = 140.0
+margin_bottom = 58.0
+color = Color( 0, 0, 0, 0.792157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="timer_holder"]
+margin_left = 5.84088
+margin_top = 3.99999
+margin_right = 135.841
+margin_bottom = 54.0
+color = Color( 0.811765, 0.0980392, 0.431373, 0.560784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score_text" type="Label" parent="timer_holder/background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -63.3326
+margin_top = -10.9822
+margin_right = 64.6674
+margin_bottom = 20.0178
+custom_fonts/font = ExtResource( 13 )
+text = "60"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="level_info" parent="." instance=ExtResource( 11 )]
 position = Vector2( -1.52701, 0 )
 
@@ -70,7 +119,10 @@ __meta__ = {
 [connection signal="wrong_bin" from="moving_bin" to="error_message" method="_on_moving_bin_wrong_bin"]
 [connection signal="general_waste_bin_entered" from="general_waste_bin" to="score_holder" method="_on_general_waste_bin_general_waste_bin_entered"]
 [connection signal="wrong_bin" from="general_waste_bin" to="error_message" method="_on_general_waste_bin_wrong_bin"]
+[connection signal="timeout" from="timer_holder/level_timer" to="." method="_on_level_timer_timeout"]
+[connection signal="timeout" from="timer_holder/level_timer" to="item_spawner" method="_on_level_timer_timeout"]
 [connection signal="pressed" from="level_info/start_button" to="item_spawner" method="_on_start_button_pressed"]
+[connection signal="pressed" from="level_info/start_button" to="timer_holder" method="_on_start_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 [editable path="level_info"]

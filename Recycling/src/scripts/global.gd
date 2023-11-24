@@ -2,6 +2,7 @@ extends Node
 
 var level_name = "Level 3"
 
+var level_going = false
 #func _ready():
 	#$fade_out_screen.play_backwards("fade_out_screen")
 

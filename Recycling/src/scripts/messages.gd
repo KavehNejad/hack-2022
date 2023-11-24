@@ -20,8 +20,9 @@ func _on_dissapear_timer_timeout():
 
 
 func display_message(message):
-	$background/error_message.text = message
-	show_node()
+	if (Global.level_going == true):
+		$background/error_message.text = message
+		show_node()
 
 
 func _on_general_waste_bin_wrong_bin(message):
