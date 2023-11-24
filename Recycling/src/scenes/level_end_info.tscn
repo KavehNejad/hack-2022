@@ -54,9 +54,9 @@ autowrap = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -238.0
-margin_top = 251.0
+margin_top = 223.0
 margin_right = 261.0
-margin_bottom = 332.0
+margin_bottom = 304.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -90,3 +90,6 @@ margin_bottom = 734.156
 rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 5 )
+
+[connection signal="pressed" from="Panel/try_again_button" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="Panel/menu_button" to="." method="_on_menu_button_pressed"]

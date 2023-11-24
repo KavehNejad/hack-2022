@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$level_timer.set_wait_time(5)
+	$level_timer.set_wait_time(20)
 
 func _process(delta):
 	$background/score_text.text = str(int($level_timer.time_left))

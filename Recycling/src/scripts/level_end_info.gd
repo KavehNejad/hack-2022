@@ -29,3 +29,11 @@ func get_score():
 		if score_holder.has_method("get_current_score"):
 			return score_holder.get_current_score()
 	return null
+
+
+func _on_try_again_button_pressed():
+	LoadScenes.go_to_scene("res://src/scenes/main.tscn")
+
+
+func _on_menu_button_pressed():
+	LoadScenes.go_to_scene("res://src/scenes/level_select.tscn")
