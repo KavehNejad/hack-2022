@@ -69,28 +69,28 @@
                 "image_src" : "res://assets/images/plastic-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1,
-                "description": "Plastic bottles can be recycled with your household recycling collection including"
+                "description": "Plastic bottles can be recycled with your household recycling collection. Make sure to not detach the plastic cap."
             },
             {
                 "name": "plastic cuttery",
                 "image_src" : "res://assets/images/plastic-cuttlary.webp",
                 "type" : "waste",
                 "points" : 1,
-                "description": "Plastic cutlery is usually made of polystyrene, which is tricky to recycle and not all local councils accept polystyrene"
+                "description": "Plastic cutlery is usually made of polystyrene, which is tricky to recycle and not all local councils accept polystyrene. Not recycleable for the purpose of this level."
             },
             {
                 "name": "bubble wrap",
                 "image_src" : "res://assets/images/bubble-wrap.png",
-                "type" : "waste",
+                "type" : "recyclable plastic",
                 "points" : 1,
-                "description": "Bubble wrap is completely recyclable, but cannot be accepted curbside or grouped in with the rest of your home and business recycling"
+                "description": "Bubble wrap is completely recyclable, but make sure no glue or tape residue is present when recycling it."
             },
             {
                 "name": "detergent bottle",
                 "image_src" : "res://assets/images/detergent-bottle.png",
                 "type" : "recyclable plastic",
                 "points" : 1,
-                "description": "Detergent bottles are 100% recyclable. Most recycling centers will easily recycle and collect this category of plastics"
+                "description": "Detergent bottles are 100% recyclable. Most recycling centers will easily recycle and collect this category of plastics. As usual, these must be thoroughly rinsed before being recycled."
             }
         ],
         "Level 4":

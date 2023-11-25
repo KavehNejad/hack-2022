@@ -50,8 +50,8 @@ margin_left = 140.0
 margin_top = 13.0
 margin_right = 252.0
 margin_bottom = 40.0
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "Food waste"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,8 +62,8 @@ margin_left = 135.0
 margin_top = 43.0
 margin_right = 349.0
 margin_bottom = 116.0
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "This is the description
 "
 autowrap = true
@@ -86,8 +86,8 @@ margin_left = 291.239
 margin_top = 12.7458
 margin_right = 325.239
 margin_bottom = 43.7458
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "BIN:"
 __meta__ = {
 "_edit_use_anchors_": false
